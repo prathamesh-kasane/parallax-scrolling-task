@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Parallax Scrolling Page</title>
+    <style>
+        /* Basic Reset */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        /* Parallax Container */
+        .parallax {
+            /* The magic for parallax effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Images */
+        .bg-1 { background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000'); }
+        .bg-2 { background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000'); }
+        .bg-3 { background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2000'); }
+
+        /* Foreground Text Box */
+        .title-box {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem 4rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.5s ease-out;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .title-box h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+
+        /* Static Content Sections */
+        .content {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(135deg, #2c3e50, #000000);
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #00d2ff;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1 -->
+    <div class="parallax bg-1">
+        <div class="title-box">
+            <h1>Techfest 2025</h1>
+        </div>
+    </div>
+
+    <!-- Content 1 -->
+    <div class="content">
+        <h2>Interactive Parallax Experience</h2>
+        <p>This section scrolls normally. Notice how the background above and below stays fixed in place, creating a beautiful sense of depth and making the scrolling experience highly engaging.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="parallax bg-2">
+        <div class="title-box">
+            <h1>Smooth Depth</h1>
+        </div>
+    </div>
+
+    <!-- Content 2 -->
+    <div class="content">
+        <h2>Clean & Modern Design</h2>
+        <p>Foreground and background elements are separated. The use of modern CSS properties ensures that the animations are completely smooth without lagging.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="parallax bg-3">
+        <div class="title-box">
+            <h1>Task Completed</h1>
+        </div>
+    </div>
+
+</body>
+</html>
